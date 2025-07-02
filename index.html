@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zehra İçin</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      max-width: 600px;
+      width: 90%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+    .slide {
+      display: none;
+    }
+    .slide.active {
+      display: block;
+    }
+    img {
+      max-width: 150px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+    button {
+      background: #ff4500;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      font-size: 16px;
+    }
+    th {
+      background-color: #ff4500;
+      color: white;
+    }
+    .confetti {
+      font-size: 50px;
+      margin-top: 20px;
+    }
+    .hug-gif {
+      max-width: 250px;
+      margin-top: 20px;
+      border-radius: 15px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 1. Slide -->
+  <div class="slide active" id="slide1">
+    <h2>Seni kaybeden çocuk neler kaybetti?</h2>
+    <p>❓🤔😢</p>
+    <button onclick="nextSlide()">İleri</button>
+  </div>
+
+  <!-- 2. Slide -->
+  <div class="slide" id="slide2">
+    <h2>Aşırı şefkatli bir insan</h2>
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDZiMWM3MHM2NWc0eTMzdXc1ZHBxejh6cmN2YXZ3bXlxemp6NzF5bSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/7vDoUoDZHoUQxMPkd7/giphy.gif" alt="Şefkatli" />
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDZiMWM3MHM2NWc0eTMzdXc1ZHBxejh6cmN2YXZ3bXlxemp6NzF5bSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/bMLGNRoAy0Yko/giphy.gif" alt="Destek" />
+    <button onclick="nextSlide()">İleri</button>
+  </div>
+
+  <!-- 3. Slide -->
+  <div class="slide" id="slide3">
+    <h2>Aşırı güzel bir kızı kaybetti</h2>
+    <p style="font-style: italic; color: gray;">(Senin güzelliğini yansıtacak bir fotoğraf bulamadım)</p>
+    <button onclick="nextSlide()">İleri</button>
+  </div>
+
+  <!-- 4. Slide -->
+  <div class="slide" id="slide4">
+    <h2>Anime ve mangadan anlayan bir kızı kaybetti</h2>
+    <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3aHJ6YnlqNTRiNjh1eGpjYnZ5OTV2ODRhbm9udTJ5a3Bza3ZmcHhybCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/10SZwUqnHDyKqY/giphy.gif" alt="Anime 1" />
+    <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3YzV2dTBoZXYzOTNvNDc0bDAyY2dzbXdleHNscmtybWZ3eGEyZnh5aiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/yuDPnPZnjncXK/giphy.gif" alt="Anime 2" />
+    <button onclick="nextSlide()">İleri</button>
+  </div>
+
+  <!-- 5. Slide -->
+  <div class="slide" id="slide5">
+    <h2>Senin gibi anlayışlı ve destekleyici bir kızı kaybetti</h2>
+    <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3Mm90eGRhdXR2cThldzJndnF6ZWxxM3g5cGk2a3d2YXN1dXc4ZjZndSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Q8JJTbh4c7vfDZdDBc/giphy.gif" alt="Destek 1" />
+    <button onclick="nextSlide()">İleri</button>
+  </div>
+
+  <!-- 6. Slide -->
+  <div class="slide" id="slide6">
+    <h2>Galatasaraylısın, mal herif bunu da kaybetti 😢</h2>
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjY5YTRodnZ3NmQyd3NzbTVrdDJ3Mm5qMndhN2hndXYxNGhvNDdnZSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/hsHcIekIe0Ep7E44rC/giphy.gif" alt="Galatasaraylı" />
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjY5YTRodnZ3NmQyd3NzbTVrdDJ3Mm5qMndhN2hndXYxNGhvNDdnZSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/T4zwgZxKrySMRR8AAb/giphy.gif" alt="GS 2" />
+    <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3ZGxlYWN5d2JpYTI2NGdwMTZ4bDB0MHFnZzJuZWM1ZjB2c2Jrd2M3aSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/N3SGikZQxrTROYEIgZ/giphy.gif" alt="GS 3" />
+    <button onclick="nextSlide()">İleri</button>
+  </div>
+
+  <!-- 7. Slide (Tablo) -->
+  <div class="slide" id="slide7">
+    <h2>Kayıplar Tablosu</h2>
+    <table>
+      <tr>
+        <th>Onun Kaybettikleri</th>
+        <th>Zehra'nın Kaybettikleri</th>
+      </tr>
+      <tr><td>Aşırı şefkatli bir insan</td><td></td></tr>
+      <tr><td>Aşırı güzel bir kız</td><td></td></tr>
+      <tr><td>Anime ve mangadan anlayan biri</td><td></td></tr>
+      <tr><td>Anlayışlı ve destekleyici biri</td><td></td></tr>
+      <tr><td>Galatasaraylı biri</td><td></td></tr>
+    </table>
+    <button onclick="nextSlide()">İleri</button>
+  </div>
+
+  <!-- 8. Slide (Son) -->
+  <div class="slide" id="slide8">
+    <h2>Unutma, senin hakanlar hakanı sultanlar sultanı hükümdarlara taç giydiren efsane bir arkadaşın var (biraz da kendimi öveyim 250 satır kod yazdım) neyse bayyy</h2>
+    <div class="confetti">🎉🎉🎉🎉🎉🎉🎉🎉🎉</div>
+    <img class="hug-gif" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDZiMWM3MHM2NWc0eTMzdXc1ZHBxejh6cmN2YXZ3bXlxemp6NzF5bSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/bMLGNRoAy0Yko/giphy.gif" alt="Sarılma" />
+    <button onclick="restart()">Başa Dön</button>
+  </div>
+
+</div>
+
+<script>
+  let currentSlide = 1;
+  const totalSlides = 8;
+
+  function showSlide(n) {
+    for (let i = 1; i <= totalSlides; i++) {
+      document.getElementById('slide' + i).classList.remove('active');
+    }
+    document.getElementById('slide' + n).classList.add('active');
+  }
+
+  function nextSlide() {
+    if (currentSlide < totalSlides) {
+      currentSlide++;
+      showSlide(currentSlide);
+    }
+  }
+
+  function restart() {
+    currentSlide = 1;
+    showSlide(currentSlide);
+  }
+</script>
+</body>
+</html>
